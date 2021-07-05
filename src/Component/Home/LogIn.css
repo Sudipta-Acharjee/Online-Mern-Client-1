@@ -1,0 +1,17 @@
+.formControl {
+  margin: 100px;
+  border: 1px solid lightsalmon;
+  padding: 15px;
+}
+.formControl > h1 {
+  text-align: center;
+  padding: 10px;
+}
+.button1 {
+  margin-top: 15px;
+  margin-left: 460px;
+  background-color: aquamarine;
+}
+.button2{
+  margin-top: 20px;
+}
