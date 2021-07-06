@@ -1,0 +1,11 @@
+.image {
+  height: 300px;
+  width: 300px;
+}
+.seperate {
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+}
+.div-control {
+  margin-bottom: 50px;
+}
