@@ -1,6 +1,5 @@
 import React from 'react';
 import './LogIn.css';
-import LogGoogle from "./LogGoogle";
 
 class LogIn extends React.Component {
   constructor() {
@@ -168,7 +167,6 @@ class LogIn extends React.Component {
           <input type="submit" value="Submit" class="button2 btn btn-success" />
 
         </form>
-        <LogGoogle />
       </div>
     );
   }
