@@ -16,7 +16,7 @@ const Footer = () => {
                         <li className="list-inline-item"><a href="//google.com"><SearchIcon className="icon" /></a></li>
                         <li className="list-inline-item"><a href="//instagram.com"><Instagram className="icon"  /></a></li>
                     </ul>
-                    <div className="mt-5 text-white">
+                    <div className="mt-5 text-primary">
                         <h6>Call now</h6>
                         <button className="btn btn-primary">+2025550295</button>
                     </div>
