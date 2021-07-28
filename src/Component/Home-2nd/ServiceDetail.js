@@ -13,7 +13,7 @@ const ServiceDetail = (props) => {
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
                 <h3>${fee}</h3>
-                <button><Link to="/booking" className="btn btn-primary"> Enroll now</Link></button>
+                <button><Link to={`/booking/${id}`} className="btn btn-primary"> Enroll now</Link></button>
             </div>
         </div>
     );

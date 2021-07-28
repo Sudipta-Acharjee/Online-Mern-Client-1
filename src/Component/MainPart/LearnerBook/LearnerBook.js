@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
+import Fakedata from '../../Fakedata';
 
 const customStyles = {
     content: {
@@ -14,6 +16,14 @@ const customStyles = {
 };
 const LearnerBook = () => {
     const { register, handleSubmit, errors } = useForm();
+    const { id } = useParams();
+    const first = Fakedata.slice(0, 20);
+    const [course, setCourse] = useState(first);
+
+    if (course[0].id === id) {
+        return course[id].Image
+    }
+
     const onSubmit = data => console.log(data);
 
     return (
@@ -24,18 +34,25 @@ const LearnerBook = () => {
             <div className="col-md-9">
                 <form style={customStyles} className="p-5" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">
-                        <input type="text" className="form-control" name="name" placeholder="Your Name" {...register("name")}required/>
+                        <input type="text" className="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required />
                         {errors?.name && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <input type="text" className="form-control" name="email" placeholder="Email"{...register("email")} required/>
+                        <input type="text" className="form-control" name="email" placeholder="Enter your Email"{...register("email")} required />
                         {errors?.email && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <input type="text" className="form-control" name="course" placeholder="course Name" {...register("course")} required/>
+                        <p ><strong>Course Name:</strong></p>
+                        <input type="text" className="form-control" value={course[id].course}  {...register("course")} required />
                         {errors?.course && <span className="text-danger">This field is required</span>}
                     </div>
-                    <div className="form-group text-right">
+                    <div className="form-group mb-3">
+                        <p><strong>Fee:</strong></p>
+                        <input type="text" className="form-control" value={course[id].fee} {...register("fee")} required />
+                        {errors?.course && <span className="text-danger">This field is required</span>}
+                    </div>
+                    <div className="form-group mb-3">
+                        <p>Payment Via VisaCard</p>
                         <button type="submit" className="btn btn-primary">Send</button>
                     </div>
                 </form>

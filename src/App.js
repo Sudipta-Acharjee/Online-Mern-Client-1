@@ -29,11 +29,12 @@ function App() {
         <Route path="/login">
           <LogIn></LogIn>
         </Route>
-        <Route path="/booking">
+        {/* <Route path="/booking">
+            
+          </Route> */}
+          <Route path="/booking/:id">
+            {/* <Service></Service> */}
             <LearnerBook></LearnerBook>
-          </Route>
-          <Route path="/booking">
-            <Service></Service>
           </Route>
           <Route path="/learner/review">
             <LearnerReview></LearnerReview>
