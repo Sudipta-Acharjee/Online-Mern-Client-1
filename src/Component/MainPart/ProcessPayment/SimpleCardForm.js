@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useForm } from 'react-hook-form';
 
 
 const SimpleCardForm = () => {
@@ -43,7 +44,7 @@ const SimpleCardForm = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <CardElement />
-                <button type="submit" disabled={!stripe}>
+                <button type="submit" disabled={!stripe} required>
                     Pay
                 </button>
             </form>

@@ -20,6 +20,9 @@ const LearnerBook = () => {
     const { id } = useParams();
     const first = Fakedata.slice(0, 20);
     const [course, setCourse] = useState(first);
+    if(ProcessPayment===null) {
+        return ;
+    }
 
     if (course[0].id === id) {
         return course[id].Image
@@ -34,30 +37,30 @@ const LearnerBook = () => {
             </div>
             <div className="col-md-9">
                 <form style={customStyles} className="p-5" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group mb-3">
-                        <input type="text" className="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required />
-                        {errors?.name && <span className="text-danger">This field is required</span>}
-                    </div>
-                    <div className="form-group mb-3">
-                        <input type="text" className="form-control" name="email" placeholder="Enter your Email"{...register("email")} required />
-                        {errors?.email && <span className="text-danger">This field is required</span>}
-                    </div>
-                    <div className="form-group mb-3">
-                        <p ><strong>Course Name:</strong></p>
-                        <input type="text" className="form-control" value={course[id].course}  {...register("course")} required />
-                        {errors?.course && <span className="text-danger">This field is required</span>}
-                    </div>
-                    <div className="form-group mb-3">
-                        <p><strong>Fee:</strong></p>
-                        <input type="text" className="form-control" value={course[id].fee} {...register("fee")} required />
-                        {errors?.course && <span className="text-danger">This field is required</span>}
-                    </div>
-                    <div className="form-group mb-3">
-                        <h2>Please Pay for me</h2>
-                        <ProcessPayment onSubmit={handleSubmit(onSubmit)}></ProcessPayment>
-                        <button type="submit" className="btn btn-primary">Send</button>
-                    </div>
+                        <div className="form-group mb-3">
+                            <input type="text" className="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required />
+                            {errors?.name && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <div className="form-group mb-3">
+                            <input type="text" className="form-control" name="email" placeholder="Enter your Email"{...register("email")} required />
+                            {errors?.email && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <div className="form-group mb-3">
+                            <p ><strong>Course Name:</strong></p>
+                            <input type="text" className="form-control" value={course[id].course}  {...register("course")} required />
+                            {errors?.course && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <div className="form-group mb-3">
+                            <p><strong>Fee:</strong></p>
+                            <input type="text" className="form-control" value={course[id].fee} {...register("fee")} required />
+                            {errors?.course && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <button type="submit" disabled={false} className="btn btn-primary">Send</button>
                 </form>
+                <div className="form-group mb-3" {...register("fee")} required>
+                    <h6>Payment via Visa Card</h6>
+                    <ProcessPayment  />
+                </div>
             </div>
         </div>
     );
