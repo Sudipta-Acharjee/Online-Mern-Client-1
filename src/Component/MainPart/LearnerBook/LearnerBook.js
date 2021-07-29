@@ -32,10 +32,10 @@ const LearnerBook = () => {
 
     return (
         <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-2">
                 <Sidebar />
             </div>
-            <div className="col-md-9">
+            <div className="col-md-10">
                 <form style={customStyles} className="p-5" onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group mb-3">
                             <input type="text" className="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required />
@@ -57,8 +57,8 @@ const LearnerBook = () => {
                         </div>
                         <button type="submit" disabled={false} className="btn btn-primary">Send</button>
                 </form>
-                <div className="form-group mb-3" {...register("fee")} required>
-                    <h6>Payment via Visa Card</h6>
+                <div style={{border: "2px solid lightsalmon"}} className="form-group mb-3" {...register("fee")} required>
+                    <h6 style={{textAlign:"center"}}>Payment via Visa Card</h6>
                     <ProcessPayment  />
                 </div>
             </div>
