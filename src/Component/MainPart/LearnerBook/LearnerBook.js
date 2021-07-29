@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Fakedata from '../../Fakedata';
+import ProcessPayment from '../../MainPart/ProcessPayment/ProcessPayment';
 
 const customStyles = {
     content: {
@@ -52,7 +53,8 @@ const LearnerBook = () => {
                         {errors?.course && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <p>Stripe Payment</p>
+                        <h2>Please Pay for me</h2>
+                        <ProcessPayment onSubmit={handleSubmit(onSubmit)}></ProcessPayment>
                         <button type="submit" className="btn btn-primary">Send</button>
                     </div>
                 </form>
