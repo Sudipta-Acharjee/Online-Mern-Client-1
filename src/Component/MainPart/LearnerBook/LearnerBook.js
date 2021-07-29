@@ -52,7 +52,7 @@ const LearnerBook = () => {
                         {errors?.course && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <p>Payment Via VisaCard</p>
+                        <p>Stripe Payment</p>
                         <button type="submit" className="btn btn-primary">Send</button>
                     </div>
                 </form>
