@@ -58,7 +58,7 @@ const LearnerBook = () => {
                         <button type="submit" disabled={false} className="btn btn-primary">Send</button>
                 </form>
                 <div style={{border: "2px solid lightsalmon"}} className="form-group mb-3" {...register("fee")} required>
-                    <h6 style={{textAlign:"center"}}>Payment via Visa Card</h6>
+                    <h6 style={{textAlign:"center"}}>Payment via Any-(Master/Visa/Debit/Credit) Card</h6>
                     <ProcessPayment  />
                 </div>
             </div>

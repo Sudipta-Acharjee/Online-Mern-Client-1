@@ -43,7 +43,20 @@ const SimpleCardForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <CardElement />
+                <CardElement options={{
+                    style: {
+                        base: {
+                            fontSize: '16px',
+                            color: '#424770',
+                            '::placeholder': {
+                                color: '#aab7c4',
+                            },
+                        },
+                        invalid: {
+                            color: '#9e2146',
+                        },
+                    },
+                }} />
                 <button type="submit" disabled={!stripe} required>
                     Payment Done
                 </button>
