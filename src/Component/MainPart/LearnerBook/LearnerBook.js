@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Fakedata from '../../Fakedata';
 import ProcessPayment from '../../MainPart/ProcessPayment/ProcessPayment';
@@ -53,14 +53,8 @@ const LearnerBook = () => {
                         <input type="text" className="form-control" value={course[id].fee} {...register("fee")} required />
                         {errors?.course && <span className="text-danger">This field is required</span>}
                     </div>
-                    
-                    <div style={{ border: "2px solid lightsalmon" }}  className="form-group mb-3" required>
-                        <h6 style={{ textAlign: "center" }}>Payment via Any-(Master/Visa/Debit/Credit) Card</h6>
-                        {errors?.course && <span className="text-danger">This field is required</span>}
-                        <ProcessPayment />
-                    </div>
                 </form>
-                <button type="submit" disabled={ProcessPayment} className="btn btn-primary">Send</button>
+                <Link to="/account"><button type="submit" disabled={ProcessPayment} className="btn btn-primary ms-5">Send</button></Link>
             </div>
         </div>
     );

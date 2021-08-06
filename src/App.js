@@ -11,10 +11,10 @@ import LogIn from './Component/Home-1st/LogIn';
 import BookingList from './Component/MainPart/BookingLIst/BookingList';
 import LearnerReview from'./Component/MainPart/LearnerReview/LearnerReview';
 import LearnerBook from './Component/MainPart/LearnerBook/LearnerBook';
-import Service from './Component/MainPart/Service/Service';
 import OrderListAdmin from './Component/MainPart/OrderListAdmin/OrderListAdmin';
 import AddService from './Component/MainPart/AddService/AddService';
 import AddAdmin from './Component/MainPart/AddAdmin/AddAdmin';
+import Payment from './Component/MainPart/LearnerBook/Payment';
 
 function App() {
   return (
@@ -50,6 +50,9 @@ function App() {
           </Route>
           <Route path="/admin/addAdmin">
             <AddAdmin></AddAdmin>
+          </Route>
+          <Route path="/account">
+            <Payment/>
           </Route>
       </Switch>
     </Router>

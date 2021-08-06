@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
                 <li>
-                    <Link to="/booking" className="text-white">
+                    <Link to="/" className="text-white">
                          <span><BookmarksIcon/>Book</span>
                     </Link>
                 </li>

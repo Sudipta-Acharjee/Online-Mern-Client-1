@@ -57,7 +57,7 @@ const SimpleCardForm = () => {
                         },
                     },
                 }} />
-                <button type="submit" disabled={!stripe} required>
+                <button type="submit"  disabled={!stripe} required>
                     Payment Done
                 </button>
             </form>
