@@ -36,7 +36,11 @@ const AddService = () => {
                         <input type="text" className="form-control" placeholder="Review"  {...register("description")} required />
                         {errors?.description && <span className="text-danger">This field is required</span>}
                     </div>
-                    <button type="submit" className="btn btn-primary ms-5" >Payment</button>
+                    <div className="form-group mb-3">
+                        <input type="text" className="form-control" placeholder="Fee"  {...register("fee")} required />
+                        {errors?.fee && <span className="text-danger">This field is required</span>}
+                    </div>
+                    <button type="submit" className="btn btn-primary" >Add Service</button>
                 </form>
             </div>
         </div>
