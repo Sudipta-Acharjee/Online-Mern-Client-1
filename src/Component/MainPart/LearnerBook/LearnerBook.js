@@ -54,7 +54,7 @@ const LearnerBook = () => {
                         {errors?.course && <span className="text-danger">This field is required</span>}
                     </div>
                 </form>
-                <Link to="/account"><button type="submit" disabled={ProcessPayment} className="btn btn-primary ms-5">PAYMENT</button></Link>
+                <Link to="/account"><button type="submit" disabled={ProcessPayment} className="btn btn-primary ms-5">Payment</button></Link>
             </div>
         </div>
     );
