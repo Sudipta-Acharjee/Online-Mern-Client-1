@@ -23,7 +23,7 @@ const Testomonial = () => {
         <section className="justify-content-center" >
             <div className="section-header center">
                 <h2 className="text-primary">Testimonial</h2>
-                <h3>What Our Patients Says </h3>
+                <h3>What Our Clients Says </h3>
             </div>
             <div className="w-75 row" style={{ "margin-left": "160px" }}>
                 {

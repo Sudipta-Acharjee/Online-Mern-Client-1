@@ -25,15 +25,15 @@ const LearnerReview = () => {
                 <form style={customStyles} className="p-5"  onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">
                         <input type="file" class="form-control" placeholder="Your Image" {...register("img")} required />
-                        {errors?.name && <span className="text-danger">This field is required</span>}
+                        {errors?.img && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
                         <input type="text" className="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required />
                         {errors?.name && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
-                        <input type="text" className="form-control" placeholder="Review"  {...register("fee")} required />
-                        {errors?.course && <span className="text-danger">This field is required</span>}
+                        <input type="text" className="form-control" placeholder="Review"  {...register("review")} required />
+                        {errors?.review && <span className="text-danger">This field is required</span>}
                     </div>
                     <button type="submit" className="btn btn-primary ms-5" >Payment</button>
                 </form>
