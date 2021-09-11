@@ -1,0 +1,6 @@
+@media only screen and (max-width: 400px) {
+  .responsive {
+    float: left;
+    margin-right: auto;
+  }
+}

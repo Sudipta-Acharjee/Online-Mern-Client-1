@@ -20,7 +20,7 @@ const infoData = [
 ]
 const Testomonial = () => {
     return (
-        <section className="justify-content-center" >
+        <section className="justify-content-center container" >
             <div className="section-header center">
                 <h2 className="text-primary">Testimonial</h2>
                 <h3>What Our Clients Says </h3>
